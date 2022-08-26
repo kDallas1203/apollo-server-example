@@ -1,0 +1,9 @@
+type Car {
+  id: ID!
+  model: String!
+  owner: Client!
+}
+
+input CarAddInput {
+  model: String!
+}

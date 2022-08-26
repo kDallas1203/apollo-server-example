@@ -2,12 +2,10 @@ import { ApolloServer } from 'apollo-server';
 import { ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
 import { context } from './context';
 import { prisma } from './db';
-import { resolvers } from './resolvers';
-import { typeDefs } from './schema';
+import { schema } from './schema';
 
 const server = new ApolloServer({
-  typeDefs,
-  resolvers,
+  schema,
   csrfPrevention: true,
   cache: 'bounded',
   context: context,

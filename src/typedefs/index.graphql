@@ -6,6 +6,7 @@ type Query {
 
  type Mutation {
   addManager(data: ManagerAddInput!): Manager
+  addClientToManager(managerId: ID!, clientId: ID!): Manager
   addClient(data: ClientAddInput!, managerId: ID!): Client
   addCar(data: CarAddInput!, clientId: ID!): Car
 }

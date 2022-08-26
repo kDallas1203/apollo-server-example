@@ -1,12 +1,13 @@
-type Manager {
+type Client {
   id: ID!
   name: String!
   phone: String!
   email: String!
-  clients: [Client]!
+  manager: Manager
+  cars: [Car]!
 }
 
-input ManagerAddInput {
+input ClientAddInput {
   name: String!
   phone: String!
   email: String!
