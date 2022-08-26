@@ -1,0 +1,13 @@
+type Manager {
+  id: ID!
+  name: String!
+  phone: String!
+  email: String!
+  clients: [Client]
+}
+
+input ManagerAddInput {
+  name: String!
+  phone: String!
+  email: String!
+}

@@ -1,0 +1,11 @@
+type Query {
+  managers: [Manager]!
+  clients: [Client]!
+  cars: [Car]!
+}
+
+ type Mutation {
+  addManager(data: ManagerAddInput!): Manager
+  addClient(data: ClientAddInput!, managerId: ID!): Client
+  addCar(data: CarAddInput!, clientId: ID!): Car
+}
